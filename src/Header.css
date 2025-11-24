@@ -1,0 +1,108 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1440px;
+  height: 70px;
+  background-color: #28a745;
+  color: white;
+  padding: 0 100px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 105px;
+  height: 45px;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0.9;
+  line-height: 45px;
+}
+
+/* Контейнер навигации */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.cart-button {
+  background-color: #ff8800;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cart-button:hover {
+  background-color: #e67600;
+}
+
+/* Контейнер поиска */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-left: 20px;
+  transition: box-shadow 0.3s;
+}
+
+.search-container:focus-within {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-icon {
+  margin-right: 6px;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 6px;
+  font-size: 14px;
+  width: 180px;
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+/* адаптивность */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
